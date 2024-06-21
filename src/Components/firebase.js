@@ -2,7 +2,6 @@ import { initializeApp } from "firebase/app";
 import { getAuth, signInWithPopup, signOut } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
-console.log(import.meta.env.VITE_FIREBASE_APP_KEY)
 
 
 const firebaseConfig = {
