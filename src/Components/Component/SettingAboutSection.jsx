@@ -14,7 +14,7 @@ export default function SettingAboutSection() {
                 <h3>Introduction</h3>
 
                 <p>
-                    Your ultimate digital companion for productivity and creativity. Notekeeper is a cutting-edge CRUD (Create, Read, Update, Delete) Progressive Web Application meticulously crafted to streamline note-taking, task management, and quick design creation, alongside intuitive photo editing functionalities.
+                    Your ultimate digital companion for productivity and creativity. Notekeeper is a cutting-edge CRUD (Create, Read, Update, Delete) Web Application meticulously crafted to streamline note-taking, task management, and quick design creation, alongside intuitive photo editing functionalities.
                 </p>
 
             </div>
