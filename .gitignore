@@ -12,8 +12,7 @@ dist
 dist-ssr
 .firebase
 *.local
-*.env
-.env.production
+.env*
 .firebaserc
 firebase.json
 sitemap.xml
