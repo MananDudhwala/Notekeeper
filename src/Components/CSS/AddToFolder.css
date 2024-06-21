@@ -1,0 +1,141 @@
+#addToFolderOuter {
+    position: absolute;
+    z-index: 3;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addToFolderInner {
+    height: 40%;
+    width: 50%;
+    padding: 15px;
+    background-color: #181820;
+    color: gray;
+    border-radius: 6px;
+}
+
+#addToFolderInner.full {
+    height: 80%;
+}
+
+#addToFolderHead,
+#addToFolderFoot {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#addToFolderHead h4 {
+    font-size: 18px;
+    font-weight: 100;
+}
+
+#addToFolderBody {
+    height: 80%;
+    width: 100%;
+    padding-left: 0 !important;
+    overflow-y: auto;
+}
+
+#newFolderInner {
+    height: 40%;
+    width: 40%;
+    padding: 15px;
+    background-color: #181820;
+    color: gray;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#newFolderHead,
+#newFolderFoot {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#newFolderHLeft,
+#newFolderHRight {
+    width: 10%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#newFolderHMiddle {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+#newFolderBody .updateFolderTile {
+    cursor: default;
+}
+
+#newFolderFoot {
+    justify-content: center;
+}
+
+@media screen and (width<=1024px) {
+
+    #addToFolderInner,
+    #newFolderInner {
+        width: 60%;
+    }
+}
+
+@media screen and (width<=768px) {
+
+    #addToFolderInner,
+    #newFolderInner {
+        width: 70%;
+    }
+}
+
+@media screen and (width<=600px) {
+
+    #addToFolderInner,
+    #newFolderInner {
+        width: 80%;
+    }
+}
+
+@media screen and (width<=500px) {
+
+    #addToFolderInner,
+    #newFolderInner {
+        width: 90%;
+        padding: 10px;
+    }
+
+    #newFolderInner {
+        height: 50%;
+    }
+
+    #addToFolderInner.full {
+        height: 90%;
+    }
+}
+
+@media screen and (width<=400px) {
+
+    #addToFolderInner.full {
+        height: 95%;
+    }
+
+    #addToFolderBody {
+        height: 70%;
+    }
+
+    #addToFolderFoot {
+        height: 20%;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+}

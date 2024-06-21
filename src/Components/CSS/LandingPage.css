@@ -1,0 +1,618 @@
+#homePage {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: var(--primarydark);
+}
+
+#homePageCont {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+#homePageCont button#primary {
+    background-color: mediumseagreen;
+    border: none;
+}
+
+#homePageCont button#secondary {
+    border-color: mediumseagreen;
+}
+
+#homePageCont::-webkit-scrollbar {
+    display: none;
+}
+
+#homePageCont nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 60px;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#homePageCont nav img {
+    height: 36px;
+    margin-left: 10px;
+    aspect-ratio: 1;
+}
+
+#homePageCont nav div {
+    display: flex;
+    gap: 15px;
+}
+
+.homepageBtns {
+    height: 45px;
+    width: 250px;
+    border: 1px solid var(--gray20);
+    border-radius: 6px;
+    font-size: 18px;
+    background-color: var(--gray10);
+    color: var(--primarylight);
+    transition: all 300ms ease-in-out;
+}
+
+.homepageBtns:hover {
+    border-color: var(--gray40);
+    background-color: transparent;
+}
+
+#homePageCont nav div button {
+    height: 40px;
+    width: 100px;
+    font-size: 16px;
+    backdrop-filter: brightness(0.5);
+}
+
+#homePageCont header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    scroll-snap-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+#homePageCont header::before {
+    content: '';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-image: url('../Images/homeImg1.jpg');
+    background-position: bottom;
+    background-size: cover;
+}
+
+#homePageCont header::after {
+    content: '';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(to right, var(--primarydark), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+}
+
+#homepageHeaderText {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+    margin-right: auto;
+}
+
+#homepageHeaderText h1 {
+    font-size: 28px;
+    max-width: 80%;
+    color: var(--primarylight);
+    text-align: center;
+}
+
+#homepageHeaderText p {
+    font-size: 18px;
+    color: gray;
+    margin: 15px 0;
+    max-width: 60%;
+    text-align: center;
+}
+
+#homepageHeaderText div {
+    display: flex;
+    margin-top: 20px;
+    gap: 20px;
+}
+
+.homepageInstallBtn {
+    height: 45px;
+    width: 250px;
+    background: linear-gradient(45deg, darkolivegreen, darkcyan);
+    color: var(--primarylight);
+    font-size: 18px;
+    border-radius: 4px;
+}
+
+#homePageSwipeDown {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+}
+
+#homePageSwipeDown svg {
+    height: 50px;
+    aspect-ratio: 1;
+    color: var(--primarylight);
+    transform: rotate(180deg);
+}
+
+#homePageSwipeDown svg#swipe {
+    display: none;
+}
+
+#homePageCont section {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    scroll-snap-align: center;
+    position: relative;
+}
+
+#homePageCont section:nth-child(odd) {
+    justify-content: flex-end;
+}
+
+.homepageSectionText {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homepageSectionText h2 {
+    max-width: 80%;
+    color: var(--primarylight);
+    text-align: center;
+    font-size: 26px;
+}
+
+.homepageSectionText p {
+    max-width: 80%;
+    color: gray;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.2;
+}
+
+#homePageCont section::before {
+    content: '';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    background-position: bottom;
+    background-size: cover;
+}
+
+#homePageCont section::after {
+    content: '';
+    height: 100%;
+    width: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to left, var(--primarydark), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+}
+
+#homePageCont section:nth-child(even)::after {
+    background: linear-gradient(to right, var(--primarydark), rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+    right: 0;
+    left: 50%;
+}
+
+#homePageCont section:nth-child(3)::before {
+    background-image: url('../Images/homeImg2.jpg');
+    left: 0;
+}
+
+#homePageCont section:nth-child(4)::before {
+    background-image: url('../Images/homeImg3.jpg');
+    right: 0;
+}
+
+#homePageCont section:nth-child(5)::before {
+    background-image: url('../Images/homeImg4.jpg');
+    left: 0;
+    background-position: center;
+}
+
+#homePageCont section:nth-child(6)::before {
+    background-image: url('../Images/homeImg5.jpg');
+    right: 0;
+}
+
+#homePageCont section:nth-child(7)::before {
+    background-image: url('../Images/homeImg6.jpg');
+    left: 0;
+}
+
+#homePageCont section:nth-child(8)::before {
+    background-image: url('../Images/homeImg7.jpg');
+    right: 0;
+}
+
+#homePageCont section:nth-child(9)::before {
+    background-image: url('../Images/homeImg8.jpg');
+    left: 0;
+}
+
+#homePageCont section:nth-child(10)::before {
+    background-image: url('../Images/homeImg9.jpg');
+    right: 0;
+    background-position: top;
+}
+
+
+#homePageCont section:nth-child(11)::before {
+    background-image: url('../Images/homeImg10.jpg');
+    left: 0;
+    background-position: center;
+}
+
+#homePageCont section:nth-child(12)::before {
+    background-image: url('../Images/homeImg11.jpg');
+    right: 0;
+    background-position: center;
+}
+
+#homepageFAQSection {
+    flex-direction: column;
+    justify-content: start !important;
+}
+
+#homepageFAQSection::before {
+    width: 100% !important;
+    background-image: url('../Images/homeImg12.jpg');
+    opacity: 0.2;
+}
+
+#homepageFAQSection::after {
+    display: none;
+}
+
+#homepageFAQHead {
+    font-size: 26px;
+    font-family: 'Montserrat';
+    color: var(--primarylight);
+    margin-top: 60px;
+    height: 80px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+#homepageFAQBody {
+    z-index: 1;
+    height: calc(100% - 140px);
+    color: var(--primarylight);
+    display: flex;
+}
+
+#homepageFAQBodyLeft,
+#homepageFAQBodyRight {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#homepageFAQBody>div div {
+    width: 90%;
+    margin: 20px 0;
+    text-align: center;
+}
+
+#homepageFAQBody>div div h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat';
+}
+
+#homepageFAQBody>div div p {
+    font-size: 16px;
+    line-height: 1.4;
+}
+
+#homePageCont footer {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    scroll-snap-align: center;
+}
+
+#homePageCont footer::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('../Images/homeImg13.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+}
+
+#homePageCont footer :where(#top, #bottom) {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+#homePageCont footer #top {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--primarylight);
+}
+
+#homePageCont footer #top>h2 {
+    font-size: 32px;
+    text-align: center;
+}
+
+#homePageCont footer #top>p {
+    text-align: center;
+}
+
+#homePageCont footer #top>div {
+    display: flex;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+#homePageCont footer #top>div>button {
+    backdrop-filter: brightness(0.6);
+}
+
+#homePageCont footer #bottom {
+    height: 30%;
+    display: flex;
+    backdrop-filter: brightness(0.3);
+}
+
+#homePageCont footer #bottom :where(#left, #middle, #right) {
+    height: 100%;
+    color: var(--primarylight);
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#homePageCont footer #bottom #left {
+    width: 40%;
+}
+
+#homePageCont footer #bottom.full #left {
+    width: 50%;
+}
+
+#homePageCont footer #bottom #left img {
+    height: 36px;
+    aspect-ratio: 1;
+}
+
+#homePageCont footer #bottom #left p {
+    max-width: 80%;
+    text-align: center;
+}
+
+#homePageCont footer #bottom #middle {
+    width: 20%;
+}
+
+#homePageCont footer #bottom.full #middle {
+    width: 50%;
+}
+
+#homePageCont footer #bottom #middle label {
+    font-size: 16px;
+    color: gray;
+}
+
+#socialBtnsCont {
+    width: 60%;
+    max-height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+#socialBtnsCont a img {
+    height: 32px;
+    aspect-ratio: 1;
+}
+
+#socialBtnsCont a img:where(#twitter, #github) {
+    filter: invert(1);
+}
+
+#homePageCont footer #bottom #right {
+    width: 40%;
+    justify-content: center;
+}
+
+#homePageCont footer #bottom #right h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+#homePageCont footer #bottom #right p {
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    #homePageCont header::before {
+        width: 100%;
+        opacity: 0.3;
+    }
+
+    #homePageCont header::after {
+        content: none;
+    }
+
+    #homepageHeaderText p,
+    .homepageSectionText p {
+        color: lightgrey
+    }
+
+    #homepageHeaderText,
+    .homepageSectionText {
+        width: 100%;
+        margin: none;
+        z-index: 1;
+    }
+
+    #homePageSwipeDown svg#scroll {
+        display: none;
+    }
+
+    #homePageSwipeDown svg#swipe {
+        display: block;
+    }
+
+    #homePageCont section::before {
+        width: 100%;
+        opacity: 0.3;
+    }
+
+    #homePageCont section::after {
+        content: none;
+    }
+
+    #homepageFAQHead {
+        font-size: 22px;
+    }
+
+    #homepageFAQBody {
+        flex-direction: column;
+    }
+
+    #homepageFAQBody>div {
+        width: 100%;
+    }
+
+    #homepageFAQBody>div div {
+        margin: 10px 0;
+        width: 95%;
+    }
+
+    #homepageFAQBody>div div:last-child {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #homePageCont {
+        scroll-snap-type: none;
+    }
+
+    #homePageCont nav {
+        backdrop-filter: blur(5px);
+    }
+
+    #homePageCont nav div button {
+        font-size: 16px;
+        width: 80px;
+    }
+
+    #homepageHeaderText h1,
+    .homepageSectionText h2 {
+        font-size: 24px;
+        max-width: 100%;
+    }
+
+    #homepageHeaderText p,
+    .homepageSectionText p {
+        font-size: 18px;
+        line-height: 1.3;
+        margin: 25px 0;
+        max-width: 90%;
+    }
+
+    #homepageHeaderText div {
+        flex-direction: column-reverse;
+    }
+
+    #homepageFAQHead {
+        font-size: 18px;
+        margin-top: 80px;
+    }
+
+    #homepageFAQBodyLeft>div:nth-last-child(2) {
+        display: none;
+    }
+
+    #homepageFAQBody>div div h4 {
+        font-size: 18px;
+    }
+
+    #homepageFAQBody>div div p {
+        font-size: 14px;
+    }
+
+    #homePageCont footer #top>h2 {
+        font-size: 22px;
+        max-width: 90%;
+    }
+
+    #homePageCont footer #top>div {
+        flex-direction: column;
+        margin: 30px 0;
+    }
+
+    #homePageCont footer #bottom {
+        flex-direction: column;
+        gap: 30px;
+        padding: 20px 0;
+        height: fit-content;
+    }
+
+    #homePageCont footer #bottom>div {
+        width: 100% !important;
+    }
+
+    #homePageCont footer #bottom>div {
+        gap: 15px;
+    }
+
+    #socialBtnsCont {
+        width: 50%;
+    }
+
+}

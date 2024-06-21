@@ -1,0 +1,120 @@
+#notification {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#notificationInner {
+    max-width: 95%;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    padding: 12px 15px;
+    background-color: var(--primarylight);
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 8px;
+    border-radius: 4px;
+}
+
+#notificationInner p {
+    font-size: 16px;
+}
+
+#notificationInner.red {
+    color: var(--warningRed);
+}
+
+#notificationInner.green {
+    color: var(--successGreen);
+}
+
+#notificationInner svg {
+    height: 22px;
+    aspect-ratio: 1;
+    margin-right: 10px;
+    animation: bellRinging 800ms ease infinite;
+}
+
+@keyframes bellRinging {
+    0% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+
+#warningModal {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 111;
+    backdrop-filter: brightness(0.4);
+    transition: all 500ms ease;
+}
+
+#warningCont {
+    height: 250px;
+    width: 400px;
+    border-radius: 6px;
+    background-color: var(--primarylight);
+    display: flex;
+    flex-direction: column;
+}
+
+#wpTop {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#wpTop p {
+    margin: 0 20px;
+    font-size: 20px;
+    text-align: center;
+    overflow: hidden;
+    max-height: 85%;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+#wpBottom {
+    height: 40%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#wpGreenBtn,
+#wpRedBtn {
+    padding: 12px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    color: var(--primarylight);
+}
+
+#wpGreenBtn {
+    background-color: var(--successGreen);
+}
+
+#wpRedBtn {
+    background-color: var(--warningRed);
+}

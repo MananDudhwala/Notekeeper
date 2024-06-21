@@ -1,0 +1,65 @@
+#addNew {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: gray;
+}
+
+#addNew>svg {
+    height: 130px;
+    aspect-ratio: 1;
+}
+
+#addNew h2 {
+    font-size: 40px;
+    font-weight: 100;
+    margin: 15px 0;
+}
+
+#addNew p {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    text-wrap: nowrap;
+}
+
+#addNew p svg {
+    height: 30px;
+    aspect-ratio: 1;
+    margin: 0 6px;
+}
+
+@media screen and (width<=768px) {
+    #addNew>svg {
+        height: 100px;
+    }
+
+    #addNew h2 {
+        font-size: 30px;
+    }
+
+    #addNew p {
+        font-size: 26px;
+    }
+
+    #addNew p>svg {
+        height: 28px;
+    }
+}
+
+@media screen and (width<=600px) {
+    #addNew>svg {
+        height: 100px;
+    }
+
+    #addNew h2 {
+        font-size: 28px;
+    }
+
+    #addNew p {
+        display: none;
+    }
+}

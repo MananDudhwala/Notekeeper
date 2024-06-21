@@ -1,0 +1,196 @@
+#searchPage_head {
+    width: 100%;
+    height: 80px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+
+#sphLeft,
+#sphRight {
+    width: 10%;
+}
+
+#sphRight button {
+    margin-left: auto;
+}
+
+#sphMiddle {
+    width: 80%;
+}
+
+#sphSearchCont {
+    width: 70%;
+    height: 45px;
+    margin: auto;
+    border: 1px solid var(--gray60);
+    border-radius: 6px;
+    color: gray;
+    display: flex;
+    align-items: center;
+}
+
+#sphSearchCont svg {
+    height: 18px;
+    width: 18px;
+    margin: 0 15px;
+    color: gray;
+}
+
+#sphSearchCont input {
+    flex: 1;
+    padding: 10px 0;
+    height: 100%;
+    font-size: 18px;
+    color: currentColor;
+    transition: width 500ms ease;
+}
+
+.lightmode #sphSearchCont input:where(:hover, :focus) {
+    color: var(--secondary);
+}
+
+.darkmode #sphSearchCont input:where(:hover, :focus) {
+    color: var(--secondary);
+}
+
+#sphSearchCont button:not(.disable):hover svg {
+    color: rgb(255, 46, 46);
+}
+
+#searchPage_body {
+    height: calc(100% - 80px);
+    width: 100%;
+}
+
+#searchPage_body section {
+    padding: 15px;
+}
+
+#searchSuggestionCont {
+    display: flex;
+    flex-wrap: wrap;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#searchSuggestionCont:has(#resultNotFound) {
+    height: 100%
+}
+
+#suggestionHead,
+#searchResultHead {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: gray;
+}
+
+#suggestionBody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.searchSuggestionTile {
+    padding: 12px 16px;
+    min-width: 100px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    text-wrap: nowrap;
+    background-color: var(--gray10);
+    color: gray;
+    cursor: pointer;
+}
+
+.searchSuggestionTile svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+
+.searchSuggestionTile:hover,
+.searchResultTile:hover {
+    background-color: var(--gray20);
+}
+
+#searchResultCont {
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+#searchResultBody a {
+    width: 100%;
+}
+
+.searchResultTile {
+    list-style: none;
+    width: 100%;
+    height: 50px;
+    padding: 0 20px;
+    margin: 10px 0;
+    font-size: 18px;
+    color: gray;
+    cursor: pointer;
+    background-color: var(--gray10);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+}
+
+.searchResultTile svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 10px;
+}
+
+@media screen and (width<=800px) {
+    #sphSearchCont {
+        width: 80%;
+    }
+}
+
+@media screen and (width<=700px) {
+    #sphSearchCont {
+        width: 90%;
+    }
+}
+
+@media screen and (width<=600px) {
+    #sphSearchCont {
+        width: 100%;
+    }
+}
+
+@media screen and (width<=500px) {
+    #searchPage_head {
+        padding: 0 10px;
+    }
+
+    #sphLeft {
+        width: 0;
+    }
+
+    #sphMiddle {
+        width: 90%;
+    }
+
+    #sphSearchCont {
+        height: 36px;
+        margin: 0;
+    }
+
+    #sphSearchCont input {
+        width: 80%;
+    }
+
+    #sphSearchCont svg {
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,356 @@
+#loginPage {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: var(--primarydark);
+    position: relative;
+}
+
+#loginPage::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    width: 65%;
+    background-image: url('../Images/loginBackground.jpg');
+    background-size: cover;
+    z-index: 0;
+    opacity: 0.4;
+}
+
+#loginPageLeft {
+    height: 100%;
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#loginPageLeft h2 {
+    font-size: 36px;
+    color: var(--primarylight);
+    z-index: 1;
+}
+
+#loginPageRight {
+    height: 100%;
+    width: 35%;
+    z-index: 1;
+}
+
+#loginPageRight>div {
+    height: 100%;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#loginPageRight a {
+    color: #96f1b5;
+}
+
+#loginPageRight a:hover {
+    text-decoration: underline;
+}
+
+#loginBox {
+    width: 75%;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#loginBox img {
+    height: 40px;
+    width: 40px;
+    aspect-ratio: 1;
+    margin: 0 auto 20px;
+    display: block;
+}
+
+.inputForm {
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--gray40);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+}
+
+.inputForm svg {
+    height: 18px;
+    width: 18px;
+    color: var(--gray80);
+}
+
+.inputForm input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 16px;
+    color: gray;
+}
+
+#loginHelpBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#loginHelpBox>:where(button, a) {
+    font-size: 14px;
+}
+
+#loginRememberBtn {
+    align-items: center;
+    color: var(--primarylight);
+}
+
+#loginRememberBtn svg {
+    height: 16px;
+    width: 16px;
+    margin-right: 5px;
+}
+
+.loginBtns {
+    font-size: 16px;
+    width: 100%;
+    height: 45px;
+    color: var(--primarylight);
+    border: 1px solid var(--gray40);
+    margin: 10px 0;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginBtns#main {
+    background-color: lightgray;
+    color: var(--primarydark);
+    border: none;
+}
+
+.loginBtns#disable {
+    color: gray;
+    cursor: not-allowed;
+}
+
+.loginBtns svg {
+    height: 18px;
+    aspect-ratio: 1;
+    margin-right: 8px;
+}
+
+.loginBtns img {
+    height: 20px;
+    aspect-ratio: 1;
+    margin-right: 8px;
+}
+
+#loginPageSignupOption {
+    font-size: 16px;
+    margin-top: 10px;
+    justify-content: center;
+    display: flex;
+    color: gray;
+}
+
+#loginPageSignupOption a {
+    margin-left: 5px;
+}
+
+#loginOr {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#loginOr span {
+    height: 1px;
+    width: 40%;
+    background-color: gray;
+}
+
+#loginOr p {
+    color: gray;
+}
+
+#loginOptionsBox {
+    width: 75%;
+    margin-top: 20px;
+}
+
+#loginSavedAccountCont {
+    justify-content: space-between !important;
+}
+
+#savedAccountCardsCont {
+    width: 100%;
+    max-height: 90%;
+    overflow-y: auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.savedAccountCard {
+    width: 140px;
+    aspect-ratio: 1;
+    background-color: var(--gray20);
+    backdrop-filter: blur(10px);
+    border-radius: 4px;
+    cursor: pointer;
+    color: gray;
+    position: relative;
+}
+
+.savedAccountCard>button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    padding: 2px;
+    border-radius: 4px;
+    transition: background-color 300ms ease-in-out;
+}
+
+.savedAccountCard>button:hover {
+    background-color: var(--gray20);
+}
+
+.savedAccountCard>button>svg {
+    height: 18px;
+    aspect-ratio: 1;
+    color: var(--warningRed);
+}
+
+.savedAccountCardTop {
+    height: 80%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.savedAccountCardTop .userAvatar {
+    height: 80%;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.savedAccountCardTop svg {
+    height: 60%;
+    aspect-ratio: 1;
+}
+
+.savedAccountCardBottom {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.savedAccountCard p {
+    max-width: 80%;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-wrap: nowrap;
+    font-size: 14px;
+    font-family: 'Comfortaa';
+    margin-bottom: 8px;
+}
+
+@media screen and (max-width: 1000px) {
+
+    #loginPage::before {
+        width: 60%;
+    }
+
+    #loginPageLeft {
+        width: 60%;
+    }
+
+    #loginPageRight {
+        width: 40%;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #loginPage::before {
+        width: 55%;
+    }
+
+    #loginPageLeft {
+        width: 55%;
+    }
+
+    #loginPageRight {
+        width: 45%;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #loginPage::before {
+        width: 100%;
+        opacity: 0.3;
+    }
+
+    #loginPageLeft {
+        display: none;
+    }
+
+    #loginPageRight {
+        width: 50%;
+        margin: auto;
+    }
+
+    #loginBox,
+    #loginOr,
+    #loginOptionsBox {
+        width: 90%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    #loginPageRight {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #loginPageRight {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #loginPageRight {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+
+    #loginPage::before {
+        background: none;
+    }
+
+    #loginPageRight {
+        width: 100%;
+    }
+}

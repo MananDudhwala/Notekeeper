@@ -1,0 +1,197 @@
+#dashboard header {
+    width: 100%;
+    height: 200px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: height 300ms ease;
+}
+
+#dashboard header.bgImgBackdropFilter::after {
+    backdrop-filter: brightness(0.6) !important;
+}
+
+#dashboard header.jumbotronShrinked {
+    height: 0;
+}
+
+#dashboard header div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primarylight);
+    z-index: 1;
+}
+
+#dashboard header div p:nth-child(1) {
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+#dashboard #body {
+    height: calc(100% - 200px);
+    width: 100%;
+    transition: height 100ms ease;
+}
+
+#dashboard #body.full {
+    height: 100%;
+}
+
+#dashboard #container nav {
+    height: 50px;
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--secondary);
+}
+
+#dashboard #container nav #left {
+    display: flex;
+    gap: 10px;
+}
+
+#dashboard #container nav #left button {
+    padding: 10px;
+    background-color: transparent;
+    color: gray;
+    font-size: 14px;
+    position: relative;
+}
+
+#dashboard #container nav #left button::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--gray40);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 200ms ease;
+}
+
+#dashboard #container nav #left button svg {
+    height: 16px;
+    aspect-ratio: 1;
+    margin-right: 5px;
+}
+
+#dashboard #container nav #left button:hover::after {
+    transform: scaleX(1);
+}
+
+#dashboard #container nav #left button.active {
+    color: var(--secondary);
+}
+
+#dashboard #container nav #left button.active::after {
+    background-color: var(--secondary);
+    animation: animateNavBtn 300ms ease;
+    transform: scaleX(1);
+}
+
+@keyframes animateNavBtn {
+    from {
+        transform: scaleX(0);
+    }
+
+    to {
+        transform: scaleX(1);
+    }
+}
+
+#dashboard #container nav #right {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+#dashboard #container nav #right button.rotate svg {
+    transition: transform 500ms ease;
+    transform: rotate(180deg);
+}
+
+#dashboard #body section {
+    height: calc(100% - 50px);
+    width: 100%;
+}
+
+#dashboard #body section:has(article) {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+#dashboard #body section :where(#pinned, #unpinned) {
+    display: flex;
+    flex-wrap: wrap;
+    transition: all 500ms ease;
+    gap: 10px;
+}
+
+#dashboard #body section #pinned:has(article) {
+    margin-bottom: 10px;
+}
+
+#dashboard #body section #pinned .pinBtn {
+    opacity: 1 !important;
+    transform: translateY(0);
+}
+
+/* For Tabs and iPads */
+
+@media screen and (width<=1024px) {
+    #dashboard #body section article {
+        width: calc(33% - 6px);
+    }
+}
+
+@media screen and (width<=768px) {
+    #dashboard #body section article.taskTile {
+        width: calc(50% - 5px);
+    }
+}
+
+/* For Smaller Tabs or Foldable phones */
+
+@media screen and (width<=540px) {
+    #dashboard #body section article {
+        width: calc(50% - 6px);
+    }
+}
+
+@media screen and (width<=500px) {
+    #dashboard #container nav {
+        padding: 0 10px;
+    }
+
+    #dashboard #body section article.taskTile {
+        width: 100%;
+    }
+}
+
+@media screen and (width<=425px) {
+    #dashboard header div p:nth-child(1) {
+        font-size: 24px;
+    }
+}
+
+@media screen and (width<=400px) {
+
+    #dashboard #container nav #left button {
+        font-size: 0;
+        padding: 8px;
+    }
+
+    #dashboard #container nav #left button svg {
+        margin: 0;
+        height: 20px;
+    }
+}

@@ -1,0 +1,62 @@
+#loadingPage {
+    position: absolute;
+    inset: 0;
+    z-index: 90;
+    border-radius: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.lightmode #loadingPage.loading {
+    background-color: var(--primarylight);
+}
+
+.darkmode #loadingPage.loading {
+    background-color: var(--primarydark);
+}
+
+#loadingPage.transition {
+    backdrop-filter: brightness(0.8) blur(5px);
+}
+
+#loadingCont {
+    display: flex;
+}
+
+.loadingBall {
+    height: 20px;
+    width: 20px;
+    border-radius: 100%;
+    margin: 5px;
+    animation: loadingBalls forwards 800ms infinite ease;
+}
+
+.loadingBall.redBall {
+    background-color: var(--warningRed);
+}
+
+.loadingBall.yellowBall {
+    background-color: yellow;
+    animation-delay: 200ms;
+}
+
+.loadingBall.greenBall {
+    background-color: lime;
+    animation-delay: 400ms;
+}
+
+@keyframes loadingBalls {
+    0% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.5);
+    }
+}

@@ -1,0 +1,105 @@
+.canvasCard {
+    width: calc(25% - 8px);
+    aspect-ratio: 1.06;
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 10px;
+    padding-bottom: 0;
+    color: gray;
+    position: relative;
+    border: 1px solid var(--gray20);
+    transition: all 300ms ease-in-out;
+}
+
+.lightmode .canvasCard:hover {
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, 0.302), 0 1px 3px 1px rgba(60, 64, 67, 0.149);
+}
+
+.darkmode .canvasCard:hover {
+    border-color: var(--gray40);
+    background-color: rgba(128, 128, 128, 0.05);
+}
+
+.canvasCardContent {
+    height: 80%;
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+}
+
+.canvasCardOptions {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.canvasCardName {
+    width: 80%;
+    font-size: 16px;
+}
+
+.canvasCard:hover .canvasCardName {
+    color: var(--secondary);
+}
+
+.canvasCardName a {
+    max-width: 95%;
+    overflow: hidden;
+    text-wrap: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+.canvasCardName a:hover {
+    text-decoration: underline;
+}
+
+#canvasCardLeft,
+#canvasCardRight {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+.canvasCardBtns {
+    transform: translateY(10px);
+    opacity: 0;
+    transition: all 300ms ease;
+}
+
+.canvasCard:hover .canvasCardBtns {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.canvasCardBtns svg {
+    height: 20px;
+    color: var(--secondary);
+}
+
+.canvasCardBtns.pinBtn {
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.canvasDeleteBtn svg {
+    color: rgb(255, 45, 45);
+}
+
+@media screen and (width <=425px) {
+    .canvasCardContent {
+        height: 75%;
+    }
+
+    .canvasCardOptions {
+        height: 25%;
+    }
+
+}
