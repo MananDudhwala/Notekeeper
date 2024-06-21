@@ -10,4 +10,5 @@ export default defineConfig({
       include: ["**/*.{jpg,jpeg,png,gif,svg,woff,woff2,eot,ttf,otf}"],
     }),
   ],
+  base: process.env.VITE_BASE_PATH
 });
