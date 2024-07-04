@@ -16,7 +16,7 @@ import FolderPage from './FolderPage';
 import Loading from '../Component/Loading';
 
 export default function Homepage(props) {
-
+    console.log(props.user)
     const navigate = useNavigate();
     const [appColor, setAppColor] = useState('96f1b5');
     const [autoDarkmode, setAutoDarkMode] = useState(true);
@@ -839,7 +839,9 @@ export default function Homepage(props) {
                     <Route path="/create" element={<CreatePage />} />
                     <Route path="/create/note" element={<CreateNotePage updateNotification={props.updateNotification} updateWarning={props.updateWarning} updateNotesData={updateNotesData} noteBg={noteBg} customNoteBg={customNoteBg} />} />
                     <Route path="/create/task" element={<CreateTaskPage updateNotification={props.updateNotification} updateWarning={props.updateWarning} tasksData={tasksData} updateTasksData={updateTasksData} noteBg={noteBg} customNoteBg={customNoteBg} />} />
-                    <Route path="/create/canvas" element={<CreateCanvasPage updateWarning={props.updateWarning} updateNotification={props.updateNotification} updateCanvasData={updateCanvasData} />} />
+                    <Route path="/create/canvas" element={<h1 style={{
+                        color: 'white'
+                    }}>work in progress</h1>} />
                     <Route path="/note/:noteKey" element={<NoteShowPage user={props.user} updateNotification={props.updateNotification} updateWarning={props.updateWarning} notesData={notesData} updateNotesData={updateNotesData} folderData={folderData} updateFolderData={updateFolderData} noteBg={noteBg} customNoteBg={customNoteBg} />} />
                     <Route path="/note/:noteKey/edit" element={<CreateNotePage user={props.user} updateNotification={props.updateNotification} updateWarning={props.updateWarning} notesData={notesData} updateNotesData={updateNotesData} noteBg={noteBg} customNoteBg={customNoteBg} />} />
                     <Route path="/task/:task" element={<CreateTaskPage updateNotification={props.updateNotification} updateWarning={props.updateWarning} tasksData={tasksData} updateTasksData={updateTasksData} noteBg={noteBg} customNoteBg={customNoteBg} />} />
