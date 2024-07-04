@@ -71,7 +71,7 @@ export default function PasswordReset(props) {
 
     const sendLink = () => {
 
-        const passwordResetData = JSON.parse(localStorage.getItem('PasswordResetData'));
+        const passwordResetData = JSON.parse(localStorage.getItem('PasswordResetData')) ?? "";
 
         // Check if the same user is trying to request the password reset link again within the same day.
         if (window.atob(passwordResetData?.email) === emailVal)
