@@ -4,7 +4,7 @@ import { useNavigate, useLocation } from "react-router-dom";
 export default function Navbar(props) {
     const page = useLocation().pathname;
     const navigate = useNavigate();
-    console.log(props)
+
 
     return (
         <nav id="sidebar">
