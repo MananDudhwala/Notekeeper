@@ -80,10 +80,7 @@ export default function CreateNotePage(props) {
 
             // Store the final result to the Main Note Content.
             recognition.onend = () => {
-                transcript.trim() && setNewNoteContent(prev => prev + " " + transcript);
-
-                // set the state for intermediate result to null so the previous result will not concat with the new one.
-                setTranscript('');
+                transcript.trim() && setNewNoteContent(prev => prev + " " + transcript)
 
                 // If isListening is still true (means user wants to speak more) then keep the recognition on listening state.
                 isListening && recognition.start();
